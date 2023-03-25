@@ -95,5 +95,7 @@ connection = create_connektion(database)
 if connection is not None:
         create_table(connection, sql_create_table)
         create_student(connection,('Бека',10.2,'пишу','2003-06-06',False))
+        delete_student(connection, 3)
+        update_student(connection, 3,'Бека',10.2,'пишу','2003-06-06',True)
         reed(connection)
         print('все работает')
